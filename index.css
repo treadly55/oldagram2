@@ -1,0 +1,178 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.container {
+    z-index:995;
+    width: 375px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    box-shadow: 1px 1px 15px 7px rgba(0, 0, 0, 0.2);
+    background-color: #F5F5F5;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    z-index: 997;
+    position: fixed;
+    border-bottom: 1px solid #c6c6c6;
+    gap: 171px;
+    top: 20px;
+    box-shadow: 0px 3px 0px 0px #d7c7c7;
+}
+
+.header-gap {
+    margin:  0 auto;
+    height: 20px;
+    width: 367px;
+    background-color: #fff; /* Match header color */
+    position: fixed; /* Make it stick to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 997;
+    box-shadow: 0px 2px 1px 4px #fff;
+}
+
+.logo img {
+    height: 67px;
+    /* padding-right: 10px; */
+    padding-left:5px;
+}
+
+.avatar {
+    background-image: url('images/user-avatar.png');
+    background-size: 90%;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 44px;
+    width: 44px;
+    margin-right: 15px;
+    clip-path: circle(45% at 50% 50%); 
+}
+
+.tile {
+    width: 375px;
+    margin: -8px auto 25px;
+    background-color: #fff;
+}
+
+.tile-image img {
+    width: 375px;
+}
+
+
+.tile-info {
+    display: flex;
+}
+
+.post-avatar {
+    height: 44px;
+    width: 44px;
+    clip-path: circle(35% at 50% 50%);
+    margin-left: 5px;
+    padding: 5px 0px;
+}
+.post-avatar img {
+    width: 46px;
+    height: 46px;
+}
+
+.post-name {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-name p {
+    margin: 0; 
+    padding: 8px 0px;
+    line-height: 0;
+}
+
+.username {
+    font-weight: 800;
+    font-size:13px;
+}
+
+.user-location {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.bottom-row {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-generated {
+    margin-left: 12px;
+    margin-bottom: 20px;
+}
+
+.icon-box {
+    margin-bottom: 15px;
+}
+
+.comment-username {
+    font-size: 13px;
+}
+
+.likes, 
+.comment-name {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+.heart-standard:hover {
+    fill:rgb(237, 136, 136);
+    fill-opacity: 30%;
+    cursor:pointer;
+}
+
+.heart-standard {
+    fill-opacity: 0%;
+    transition: all 0.8s;
+}
+
+.heart-filled {
+    fill:rgb(237, 136, 136);
+    fill-opacity: 100%;
+    cursor:pointer;
+}
+
+.heart-filled.bounce {
+    animation: bounce 0.5s ease-in-out
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1); /* Start at normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Scale up a bit in the middle of the animation */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+    }
+}
+
+
+
+
+
+
+
+
+
