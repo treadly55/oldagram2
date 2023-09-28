@@ -29,12 +29,13 @@ header {
     box-shadow: 0px 3px 0px 0px #d7c7c7;
 }
 
+/* work-around to prevent page content from showing when scrolled between top of browser and start of app */
 .header-gap {
     margin:  0 auto;
     height: 20px;
     width: 367px;
-    background-color: #fff; /* Match header color */
-    position: fixed; /* Make it stick to the top */
+    background-color: #fff;
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
@@ -44,7 +45,6 @@ header {
 
 .logo img {
     height: 67px;
-    /* padding-right: 10px; */
     padding-left:5px;
 }
 
@@ -68,7 +68,6 @@ header {
 .tile-image img {
     width: 375px;
 }
-
 
 .tile-info {
     display: flex;
@@ -134,7 +133,6 @@ header {
     font-weight: 800;
 }
 
-
 .heart-standard:hover {
     fill:rgb(237, 136, 136);
     fill-opacity: 30%;
@@ -147,7 +145,7 @@ header {
 }
 
 .heart-filled {
-    fill:rgb(237, 136, 136);
+    fill:rgb(243, 62, 62);
     fill-opacity: 100%;
     cursor:pointer;
 }
@@ -158,21 +156,13 @@ header {
 
 @keyframes bounce {
     0% {
-        transform: scale(1); /* Start at normal size */
+        transform: scale(1); 
     }
     50% {
-        transform: scale(1.1); /* Scale up a bit in the middle of the animation */
+        transform: scale(1.1); 
     }
     100% {
-        transform: scale(1); /* Return to normal size */
+        transform: scale(1); 
     }
 }
-
-
-
-
-
-
-
-
-
+/* required: animation on image | check active states | tidy css | */
