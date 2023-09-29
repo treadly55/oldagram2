@@ -89,12 +89,9 @@ tileSection.addEventListener('click', function(e) {
         let tile = e.target.closest(".tile")
         if(tile) {
             let arrayPosition = tile.getAttribute("data-id")
-            let tileID = tile.getAttribute('id')
-            console.log(arrayPosition)
-            console.log(tileID)
                        
             //declare ID to variable
-            let heartIcon = document.getElementById('heart-icon')
+            let heartIcon = e.target
             let hasClass = heartIcon.classList.contains('heart-filled')
             //check classes and apply correct set of classes, increment or decrement array value
             if (hasClass) {
@@ -117,3 +114,5 @@ tileSection.addEventListener('click', function(e) {
         }
     }
 })
+
+

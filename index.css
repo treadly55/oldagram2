@@ -8,12 +8,13 @@ html, body {
     z-index:995;
     width: 375px;
     margin: 0 auto;
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    padding-top: 90px;
+    padding-top: 30px;
     box-shadow: 1px 1px 15px 7px rgba(0, 0, 0, 0.2);
     background-color: #F5F5F5;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 header {
@@ -25,22 +26,9 @@ header {
     position: fixed;
     border-bottom: 1px solid #c6c6c6;
     gap: 171px;
-    top: 20px;
+    top: 0px;
     box-shadow: 0px 3px 0px 0px #d7c7c7;
-}
-
-/* work-around to prevent page content from showing when scrolled between top of browser and start of app. Not yet working correctly*/
-.header-gap {
-    margin:  0 auto;
-    height: 20px;
-    width: 367px;
-    background-color: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 997;
-    box-shadow: 0px 2px 1px 4px #fff;
+    margin-top:  10px;
 }
 
 .logo img {
@@ -80,6 +68,7 @@ header {
     margin-left: 5px;
     padding: 5px 0px;
 }
+
 .post-avatar img {
     width: 46px;
     height: 46px;
@@ -165,4 +154,3 @@ header {
         transform: scale(1); 
     }
 }
-/* required: animation on image | check active states | tidy css | */
