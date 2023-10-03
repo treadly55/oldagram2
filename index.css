@@ -154,3 +154,7 @@ header {
         transform: scale(1); 
     }
 }
+
+#heart-icon {
+    cursor: pointer;
+}
