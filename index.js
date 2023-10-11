@@ -30,6 +30,7 @@ const posts = [
 
 //assign container area 
 const tileSection = document.getElementById("content-container")
+const logoSpecial = document.getElementById("logo-special")
 
 function postTile () {
     let tilesHTML = ''
@@ -113,3 +114,7 @@ function handleTileClick(e) {
 //fire the animation on the heart icon
 tileSection.addEventListener('click', handleTileClick)
 tileSection.addEventListener('tap', handleTileClick)
+
+logoSpecial.addEventListener('click', function(){
+    logoSpecial.classList.add('logo-special')
+})
