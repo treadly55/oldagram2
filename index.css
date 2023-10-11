@@ -35,30 +35,21 @@ header {
 }
 
 .logo-special {
-    filter: drop-shadow(0px 2px 10px blue);
-    animation: fillText 2s ease-out, fillText2nd 10s 2s ease-out; 
+    rotate: 1%;
+    animation: fillText 1.2s linear 
 }
 
 @keyframes fillText {
     0% {
-        filter: drop-shadow(2px 2px 45px transparent);
+        transform: rotate(0deg);
     }
-    99% {
-        filter: drop-shadow(2px 2px 1px blue);
-    }
+    50% {
+        transform: rotate(360deg);
 
-    100% {
-        filter: drop-shadow(0px 2px 10px blue);
-    }
-}
-
-
-@keyframes fillText2nd {
-    0% {
-        filter: drop-shadow(2px 2px 1px blue);
     }
     100% {
-        filter: drop-shadow(2px 2px 45px transparent);
+        transform: rotate(0deg);
+
     }
 }
 

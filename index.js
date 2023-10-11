@@ -115,6 +115,10 @@ function handleTileClick(e) {
 tileSection.addEventListener('click', handleTileClick)
 tileSection.addEventListener('tap', handleTileClick)
 
+//easter egg animation on logo
 logoSpecial.addEventListener('click', function(){
     logoSpecial.classList.add('logo-special')
+    setTimeout(function(){
+        logoSpecial.classList.remove('logo-special')
+    },1200 )
 })
