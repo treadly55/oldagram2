@@ -82,71 +82,34 @@ function postTile () {
 postTile()
 
 
-// function handleTileClick(e) {
-//     if (e.target.closest('.heart-shape')) {
-//         // Get array position
-//         let tile = e.target.closest(".tile");
-//         if (tile) {
-//             let arrayPosition = tile.getAttribute("data-id");
-
-//             //declare ID to variable
-//             let heartIcon = e.target;
-//             let hasClass = heartIcon.classList.contains('.heart-filled');
-
-//             //check classes and apply correct set of classes, increment or decrement array value
-//             if (hasClass) {
-
-//                 posts[arrayPosition].likes -= 1;
-//                 heartIcon.classList.remove('heart-filled');
-//                 heartIcon.classList.remove('heart-standard');
-//             } else {
-//                 posts[arrayPosition].likes += 1;
-//                 heartIcon.classList.add('heart-filled');
-//                 heartIcon.classList.add('heart-standard');
-//                 heartIcon.classList.add('bounce');
-//             }
-
-//             // Render to page the updated Likes value
-//             let likeElement = tile.querySelector('.likes');
-//             if (likeElement) {
-//                 likeElement.innerHTML = `${posts[arrayPosition].likes.toLocaleString()} likes`;
-//             }
-//         }
-//     }
-// }
-
-
 function handleTileClick(e) {
     if (e.target.closest('.heart-shape')) {
         // Get array position
-        let tile = e.target.closest(".tile");
+        let tile = e.target.closest(".tile")
         if (tile) {
-            let arrayPosition = tile.getAttribute("data-id");
+            let arrayPosition = tile.getAttribute("data-id")
+            let heartIcon = e.target
+            let hasClass = heartIcon.classList.contains('heart-filled')
 
-            // Declare ID to variable
-            let heartIcon = e.target;
-            let hasClass = heartIcon.classList.contains('heart-filled');
-
-            // Check classes and apply correct set of classes, increment or decrement array value
+            // Check classes for selected yes/no and apply classes for animation, increment or decrement array value
             if (hasClass) {
-                posts[arrayPosition].likes -= 1;
-                heartIcon.classList.remove('heart-filled');
-                heartIcon.classList.add('heart-standard');
-                heartIcon.classList.remove('bounce');  // Assuming you'd also want to remove the 'bounce' class when the heart isn't filled
+                posts[arrayPosition].likes -= 1
+                heartIcon.classList.add('heart-standard')
+                heartIcon.classList.remove('bounce', 'heart-filled')
             } else {
-                posts[arrayPosition].likes += 1;
-                heartIcon.classList.add('heart-filled', 'bounce');  // You can add multiple classes at once
-                heartIcon.classList.remove('heart-standard');
+                posts[arrayPosition].likes += 1
+                heartIcon.classList.add('heart-filled', 'bounce')
+                heartIcon.classList.remove('heart-standard')
             }
-
             // Render to page the updated Likes value
-            let likeElement = tile.querySelector('.likes');
+            let likeElement = tile.querySelector('.likes')
             if (likeElement) {
-                likeElement.innerHTML = `${posts[arrayPosition].likes.toLocaleString()} likes`;
+                likeElement.innerHTML = `${posts[arrayPosition].likes.toLocaleString()} likes`
             }
         }
     }
 }
 
-tileSection.addEventListener('click', handleTileClick);
-tileSection.addEventListener('tap', handleTileClick);
+//fire the animation on the heart icon
+tileSection.addEventListener('click', handleTileClick)
+tileSection.addEventListener('tap', handleTileClick)
