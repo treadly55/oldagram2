@@ -120,5 +120,5 @@ logoSpecial.addEventListener('click', function(){
     logoSpecial.classList.add('logo-special')
     setTimeout(function(){
         logoSpecial.classList.remove('logo-special')
-    },1200 )
+    },1000 )
 })

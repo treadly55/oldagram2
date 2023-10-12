@@ -36,7 +36,7 @@ header {
 
 .logo-special {
     rotate: 1%;
-    animation: fillText 1.2s linear 
+    animation: fillText 1s linear 
 }
 
 @keyframes fillText {
